@@ -1,4 +1,4 @@
 export enum ROUTES {
     home = "/",
-    noHookPage = "hook-page"
+    noHookPage = "/hook-page"
 }

@@ -1,21 +1,21 @@
 // rfc = snippet default
 import React from "react";
+import { ROUTES } from "@/constants/routes";
+import Link from "next/link";
 
 interface IMenu {
-    op1: string;
-    op2: string;
-    op3: string;
-    op4?: string;
+    op1?: string;
+    op2?: string;
+    op3?: string;
+    op4?: string; // ? permite ser vazio
 }
 
 const Menu = ({ op1, op2, op3, op4 } : IMenu) => {
   return (
-    <ul className="text-medium">
-      <li>{ op1 }</li>
-      <li>{ op2 }</li>
-      <li>{ op3 }</li>
-      <li>{ op4 }</li>
-    </ul>
+    <nav>
+      <Link href={ROUTES.home}>{op1}</Link>
+      <Link href={ROUTES.noHookPage}>{op2}</Link>
+    </nav>
   );
 };
 

@@ -10,10 +10,14 @@ type IData = {
     }[]
 }
 
+export const metadata: Metadata = {
+    title: "Persongens Rick and Morty",
+    description: "Aplicação teste de consumo de api server side usando nextjs",
+}
+
 const HookPage = async () => {
   const res = await fetch("https://rickandmortyapi.com/api/character");
   const data: IData = await res.json();
-  console.log(data);
 
   return (
     <>
@@ -23,6 +27,7 @@ const HookPage = async () => {
             return(
                 <div key={index}>
                     <p>{item.name}</p>
+                    <Link href={`/character/${item.id}`}>Me clique {item.id}</Link>
                 </div>
             )
         })}

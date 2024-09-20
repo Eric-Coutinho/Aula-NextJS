@@ -9,8 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        white: "var(--white)",
+        black: "var(--black)",
+      },
+      fontSize: {
+        large: "36px",
+        medium: "24px",
+        small: "16px"
+      },
+      fontFamily: {
+        robFont: "var(--roboto)",
+        comicFont: "var(--comicSans)"
       },
     },
   },
